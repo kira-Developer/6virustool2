@@ -2,17 +2,16 @@ def cyb():
     from clear import clear 
     import hashlib
     import base64
+    from termcolor import colored
     clear()
     mawar = ("\033[31;1m")
     white = ("\033[37m")
     def menu():
         print("\n")
-        print("======================================")
-        print("===========Coded by @1zsb=============")
-        print("                                      ")
-        print("  [1] Start            [99]Main Menu  ")
-        print("                 ==                   ")
-        print("======================================")
+        print(colored("==================Coded by @1zsb =====================" , 'red' , attrs=['reverse'] ) , end='\n\n')
+
+        print(colored("  [1] Start                     [99]  Main Menu  " , 'green') ,end= '\n\n')
+        print(colored("======================================================" , 'red' ,  attrs=['reverse']))
         print("\n")
 
     def choose():

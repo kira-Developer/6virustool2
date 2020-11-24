@@ -83,7 +83,7 @@ def virus():
     elif r00t == '3':
         iplook()
     elif r00t == '4':
-       instainfo()
+        instainfo()
     elif r00t == '5':
         numscan()
 virus()
