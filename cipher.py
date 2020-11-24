@@ -3,6 +3,7 @@ def cyb():
     import hashlib
     import base64
     from termcolor import colored
+    import os
     clear()
     mawar = ("\033[31;1m")
     white = ("\033[37m")

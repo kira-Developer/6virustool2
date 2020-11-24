@@ -19,11 +19,7 @@ cyan = ("\033[1m\033[36m")
 mawar = ("\033[31;1m")
 white = ("\033[37m")
 console = Console()
-def virus():
-    clear = "\x1b[0m"
-    colors = [36, 32, 34, 35, 31, 37]
-
-    x = colored('''                             .-""""-.
+header = colored('''                             .-""""-.
                            / j      
                           :.d;       ;
                           $$P        :
@@ -64,26 +60,38 @@ def virus():
      '-....-"  bug                  ""^^T$$$$P"
                                                 ''' , 'red')
 
-    for N, line in enumerate( x.split( "\n" ) ):
+for N, line in enumerate( header.split( "\n" ) ):
         print(line)
         sleep( 0.05 )
-    ketik(colored("===    Welcome To 6Virus Tool V1    ===" , 'red' , attrs=['reverse', 'blink']))
-    print(" ")
-    ketik(colored("=== insta : @1zsb , github: @6virus ===" ,'green' , attrs=['reverse', 'blink']))
-    print(" ")
-    console.print("[bold green]|\| [1] Cipher , [2] Host IP , [3] IP Lookup  |\|[/bold green]")
-    console.print("[bold green]|/| [4] insta-info , [5] NumScan , [3] Here  |/|[/bold green]")
-    console.print("[bold green]|\| [1] Here , [2] Here , [3] Here  |\|[/bold green]" , end="\n\n")
-    
+clear = "\x1b[0m"
+colors = [36, 32, 34, 35, 31, 37]
+
+ketik(colored("===    Welcome To 6Virus Tool V1    ===" , 'red' , attrs=['reverse', 'blink']))
+print(" ")
+ketik(colored("=== insta : @1zsb , github: @6virus ===" ,'green' , attrs=['reverse', 'blink']))
+print(" ")
+console.print("[bold green]|\| [1] Cipher , [2] Host IP , [3] IP Lookup  |\|[/bold green]")
+console.print("[bold green]|/| [4] insta-info , [5] NumScan , [3] Here  |/|[/bold green]")
+console.print("[bold green]|\| [1] Here , [2] Here , [3] Here  |\|[/bold green]" , end="\n\n")
+
+def virus():
+    options = [1 , 2 , 3 , 4 ,5 , 'exit']
     r00t = input(colored("root@6Virus:~$ " , 'green'))
-    if r00t == '1':
-        cyb()
-    elif r00t == '2':
-        ip()
-    elif r00t == '3':
-        iplook()
-    elif r00t == '4':
-        instainfo()
-    elif r00t == '5':
-        numscan()
+    print(' ')
+    if r00t in options:
+        
+        if r00t == '1':
+            cyb()
+        if r00t == '2':
+            ip()
+        if r00t == '3':
+            iplook()
+        if r00t == '4':
+            instainfo()
+        if r00t == '5':
+            numscan()
+        if r00t == 'exit':
+            print(colored('bye' , 'red') , end='\n\n')
+        exit()
+    else : print('command not found', end= '\n\n') ; virus()
 virus()
